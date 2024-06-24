@@ -1,0 +1,2 @@
+const BATTokenAddress = "0x39bADb565B5AEe66B056B2b9eb87EF56c9D460A8"
+const NFTFactoryAddress = "0xfe8dc8ccc0cbb71b55e5008e5401079df72b429c"
