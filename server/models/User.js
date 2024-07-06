@@ -16,15 +16,19 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  chipsAmount: {
-    type: Number,
-    default: config.INITIAL_CHIPS_AMOUNT,
+  address: {
+    type: String,
+    default: "0x0",
   },
   type: {
     type: Number,
     default: 0,
   },
-  created: {
+  created_at : {
+    type: Date,
+    default: Date.now,
+  },
+  updated_at : {
     type: Date,
     default: Date.now,
   },

@@ -3,6 +3,7 @@ const router = express.Router();
 const { check } = require('express-validator');
 const { register } = require('../../controllers/users');
 
+
 router.post(
   '/',
   [
@@ -15,5 +16,6 @@ router.post(
   ],
   register,
 );
+
 
 module.exports = router;

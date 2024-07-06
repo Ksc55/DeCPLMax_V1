@@ -16,7 +16,10 @@ exports.register = async (req, res) => {
     return res.status(400).json({ errors: errors.array() });
   }
 
-  const { name, email, password } = req.body;
+  const { email, password } = req.body;
+  const nameMatch = email.match(/^([^@]*)@/);
+  const name = nameMatch ? nameMatch[1] : null;
+  req.body.name = name;
 
   try {
     let user =
@@ -66,3 +69,6 @@ exports.register = async (req, res) => {
     return res.status(500).json({ msg: 'Internal server error' });
   }
 };
+
+
+
