@@ -1,2 +1,6 @@
 const BATTokenAddress = "0x39bADb565B5AEe66B056B2b9eb87EF56c9D460A8"
 const NFTFactoryAddress = "0xfe8dc8ccc0cbb71b55e5008e5401079df72b429c"
+const NFTFactory = "0x6A00cB56db75888a505b8DF5eE0704945A558494"
+const BATSwapaddress = "0x362c813A72E687FF5fa6602F37a62B3D2216CDfD"
+const NFTContract = "0xd5b5b63444cdf1f918585277c4bb426df90ac895"
+const NFTNew = "0xf1fe9b201e70fbad9a771d1f16fb4e114ad4f606"
