@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { check } = require('express-validator');
 //const {} = require('../../validators/address');
-const {validateTokenMeta} = require('../../middleware/auth');
+const {validateTokenMeta, validateBearerToken} = require('../../middleware/auth');
 
 const { getCurrentUserMeta, loginMeta } = require('../../controllers/auth_meta');
 

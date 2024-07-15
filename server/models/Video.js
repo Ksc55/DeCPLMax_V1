@@ -1,3 +1,6 @@
+const config = require('../config');
+const mongoose = require('mongoose');
+
 const VideoSchema = new mongoose.Schema({
     owner: {
       type: String,
@@ -34,14 +37,6 @@ const VideoSchema = new mongoose.Schema({
         type: Number,
         default: 0,
       },
-       created_at : {
-    type: Date,
-    default: Date.now,
-  },
-  updated_at : {
-    type: Date,
-    default: Date.now,
-  },
   created_at : {
     type: Date,
     default: Date.now,

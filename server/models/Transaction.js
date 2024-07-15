@@ -1,3 +1,6 @@
+const config = require('../config');
+const mongoose = require('mongoose');
+
 const TransactionSchema = new mongoose.Schema({
     address: {
       type: String,
