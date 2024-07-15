@@ -51,12 +51,14 @@ import {
             <Typography color="gray">
               In this video we will learn how to learn JavaScript in 2021 and beyond
             </Typography>
+            
           </div>
          
         </CardBody>
         <CardFooter className="pt-3">
           {/* You can add any footer content here */}
         </CardFooter>
+        
       </Card>
     );
   }
