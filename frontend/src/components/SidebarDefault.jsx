@@ -19,6 +19,7 @@ import {
   PowerIcon,
 } from "@heroicons/react/24/solid";
 import { ChevronRightIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
+import { Link } from "react-router-dom";
 
 const subscriptionData = [
   { id: 1, name: "John Doe", avatar: "https://docs.material-tailwind.com/img/face-2.jpg", description: "Software Engineer" },
@@ -36,7 +37,7 @@ export function SidebarDefault() {
   };
 
   return (
-    <Card className="h-[calc(100vh-2rem)] shadow-none w-full max-w-[20rem] p-4 shadow-blue-gray-900/5">
+    <Card className="h-[calc(100vh-2rem)] shadow-none w-full max-w-[20rem] p-4 shadow-blue-gray-900/5 hidden md:flex">
       <List>
         <Accordion
           open={open === 1}
@@ -47,23 +48,25 @@ export function SidebarDefault() {
             />
           }
         >
-          <ListItem className="p-0" selected={open === 1}>
-            <AccordionHeader onClick={() => handleOpen(1)} className="border-b-0 p-3">
-              <ListItemPrefix>
-                <PresentationChartBarIcon className="h-5 w-5" />
-              </ListItemPrefix>
-              <Typography color="blue-gray" className="mr-auto font-normal">
-                Home
-              </Typography>
-            </AccordionHeader>
+          <Link to="/dashboard">
+          <ListItem className="p-3" selected={open === 1}>
+            {/* <AccordionHeader onClick={() => handleOpen(1)} className="border-b-0 p-3"> */}
+            <ListItemPrefix>
+              <PresentationChartBarIcon className="h-5 w-5" />
+            </ListItemPrefix>
+            <Typography color="blue-gray" className="mr-auto font-normal">
+              Dashboard
+            </Typography>
+            {/* </AccordionHeader> */}
           </ListItem>
-          <AccordionBody className="py-1">
+          </Link>
+          {/* <AccordionBody className="py-1">
             <List className="p-0">
               <ListItem>
                 <ListItemPrefix>
                   <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
                 </ListItemPrefix>
-                Popular
+                Swap Token
               </ListItem>
               <ListItem>
                 <ListItemPrefix>
@@ -78,7 +81,7 @@ export function SidebarDefault() {
                 Projects
               </ListItem>
             </List>
-          </AccordionBody>
+          </AccordionBody> */}
         </Accordion>
         <Accordion
           open={open === 2}
@@ -90,14 +93,14 @@ export function SidebarDefault() {
           }
         >
           <ListItem className="p-0" selected={open === 2}>
-            <AccordionHeader onClick={() => handleOpen(2)} className="border-b-0 p-3">
+            {/* <AccordionHeader onClick={() => handleOpen(2)} className="border-b-0 p-3">
               <ListItemPrefix>
                 <ShoppingBagIcon className="h-5 w-5" />
               </ListItemPrefix>
               <Typography color="blue-gray" className="mr-auto font-normal">
                 Popular
               </Typography>
-            </AccordionHeader>
+            </AccordionHeader> */}
           </ListItem>
           <AccordionBody className="py-1">
             <List className="p-0">
@@ -115,23 +118,26 @@ export function SidebarDefault() {
               </ListItem>
             </List>
           </AccordionBody>
-          <ListItem>
-          <ListItemPrefix>
+          <Link to="/swap">
+            <ListItem>
+              <ListItemPrefix>
                 <ShoppingBagIcon className="h-5 w-5" />
               </ListItemPrefix>
-          <Typography color="blue-gray" className="mr-auto font-normal">
-                Categories
+              <Typography color="blue-gray" className="mr-auto font-normal">
+                Swap Token
               </Typography>
-          </ListItem>
+            </ListItem>
+          </Link>
+          <Link to="/User">
           <ListItem>
-          <ListItemPrefix>
-                <ShoppingBagIcon className="h-5 w-5" />
-              </ListItemPrefix>
-          <Typography color="blue-gray" className="mr-auto font-normal">
-                Favorite
-              </Typography>
+            <ListItemPrefix>
+              <ShoppingBagIcon className="h-5 w-5" />
+            </ListItemPrefix>
+            <Typography color="blue-gray" className="mr-auto font-normal">
+              Profile
+            </Typography>
           </ListItem>
-          
+          </Link>
         </Accordion>
         <hr className="my-2 border-blue-gray-50" />
         <h1 className="font-bold">Subscription</h1>
