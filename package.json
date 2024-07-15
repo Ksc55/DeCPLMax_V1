@@ -1,5 +1,5 @@
 {
-  "name": "hardhat-project-decplmaxv1",
+  "name": "hardhat_project_decplmax_v1",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
     "hardhat": "^2.22.5",
