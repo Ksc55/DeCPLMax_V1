@@ -20,7 +20,6 @@ var walletAdmin = new Wallet(PrivateKeyAdmin, provider);
 var walletUser1 = new Wallet(PrivateKeyUser1, provider);
 var walletUser2 = new Wallet(PrivateKeyUser2, provider);
 
-// Contract ABI and Bytecode (replace with the actual ABI and Bytecode of BATToken)
 const BATTokenABI = [
     {
         "inputs": [],
