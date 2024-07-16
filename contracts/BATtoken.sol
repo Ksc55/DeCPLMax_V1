@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+pragma solidity ^0.8.15;
 
-//Contract Address 0x3c13f4F98e94d19b73BB47b3eb1b42e14E75611b
+
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
@@ -17,8 +17,8 @@ contract BATToken is ERC20, Ownable(msg.sender), ReentrancyGuard {
     event ScoreUpdated(address indexed user, string scoreType, uint256 score);
     event BATMinted(address indexed user, uint256 amount);
 
-    constructor() ERC20("Basic Attention Token", "BAT") {
-        _mint(msg.sender, 1000000 * 10**decimals());
+    constructor() ERC20("Decplmax Basic Attention Token", "DecplmaxBAT") {
+        _mint(msg.sender, 100000000 * 10**decimals());
     }
 
     modifier validAddress(address user) {
