@@ -1,0 +1,32 @@
+0xc198fcb934f44305b7cf5cdad1323b67b43cb601
+
+https://player.thetavideoapi.com/video/video_mrgzu37j2cfzvzs99tj1b93jm0
+
+<iframe src="https://player.thetavideoapi.com/video/video_mrgzu37j2cfzvzs99tj1b93jm0" 
+        border="0" 
+        width="100%" 
+        height="100%"
+        allowfullscreen/>
+
+
+const optionalHlsOpts = null;
+const player = window.player = videojs('player-container', {
+  techOrder: ["theta_hlsjs", "html5"],
+  sources: [{
+    src: "https://media.thetavideoapi.com/org_6h09f913cjt42p6wjkzbnwtiwjqv/srvacc_95mm5vkypufit22wvxa4yxhc0/video_mrgzu37j2cfzvzs99tj1b93jm0/master.m3u8",
+    type: "application/vnd.apple.mpegurl",
+    label: "auto"
+  }],
+  theta_hlsjs: {
+    videoId: "video_mrgzu37j2cfzvzs99tj1b93jm0",
+    userId: "YOUR_AUTHED_USER_ID",
+    walletUrl: "wss://api-wallet-service.thetatoken.org/theta/ws",
+    onWalletAccessToken: null,
+    hlsOpts: null
+  }
+});
+
+https://docs.thetatoken.org/docs/theta-p2p-javascript-sdk#include-scripts
+
+collection name : DeCPLMax_Version_1
+symbol : DeCPL
